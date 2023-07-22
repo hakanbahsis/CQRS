@@ -1,3 +1,4 @@
+using WebUI.CQRSPattern.Comments;
 using WebUI.CQRSPattern.Handlers;
 using WebUI.DAL.Context;
 
@@ -7,6 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Context>();
 builder.Services.AddScoped<GetProductQueryHandler>();
+builder.Services.AddScoped<CreateProductCommandHandler>();
+builder.Services.AddScoped<RemoveProductCommandHandler>();
+builder.Services.AddScoped<GetProductByIdQueryHandler>();
+builder.Services.AddScoped<GetProductUpdateByIdQueryHandler>();
+builder.Services.AddScoped<UpdateProductCommandHandler>();
 
 var app = builder.Build();
 

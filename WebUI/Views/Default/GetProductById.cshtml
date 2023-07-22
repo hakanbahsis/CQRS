@@ -1,0 +1,20 @@
+﻿@model WebUI.CQRSPattern.Results.GetProductByIdQueryResult
+@{
+    ViewData["Title"] = "GetProductById";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>GetProductById</h1>
+<form method="get">
+    <div class="input-group mb-3 border">
+        <input type="text" asp-for="Id" class="form-control text-black" placeholder="Ürün Id">
+    </div>
+    <div class="input-group mb-3 border">
+        <input type="text" asp-for="ProductName" class="form-control text-black" placeholder="Ürün Adı">
+    </div>
+    <div class="input-group mb-3 border">
+        <input type="text" asp-for="ProductBrand" class="form-control text-black" placeholder="Ürün Markası">
+    </div>
+    
+    <button class="btn btn-success">Getir</button>
+</form>

@@ -15,6 +15,7 @@
             <th>Kategori</th>
             <th>Stok</th>
             <th>Fiyat</th>
+            <th>Getir</th>
             <th>Sil</th>
             <th>Güncelle</th>
         </tr>
@@ -28,6 +29,7 @@
                 <td>@item.Category</td>
                 <td>@item.Stock</td>
                 <td>@item.Price ₺</td>
+                <td><a href="/Default/GetProductById/@item.Id" class="btn btn-primary">Getir</a></td>
                 <td><a href="/Default/DeleteProduct/@item.Id" class="btn btn-danger">Sil</a></td>
                 <td><a href="/Default/UpdateProduct/@item.Id" class="btn btn-warning">Güncelle</a></td>
             </tr>

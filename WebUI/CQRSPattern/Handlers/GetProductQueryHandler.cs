@@ -16,6 +16,7 @@ namespace WebUI.CQRSPattern.Handlers
         {
             var values = _context.Products.Select(x => new GetProductQueryResult
             {
+                Id = x.Id,
                 ProductName = x.ProductName,
                 Brand=x.Brand,
                 Category=x.Category,

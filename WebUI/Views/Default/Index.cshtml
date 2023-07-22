@@ -1,0 +1,38 @@
+﻿@model List<WebUI.CQRSPattern.Results.GetProductQueryResult>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int count = 0;
+}
+
+<div class="container">
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Ürün Adı</th>
+            <th>Marka</th>
+            <th>Kategori</th>
+            <th>Stok</th>
+            <th>Fiyat</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.ProductName</td>
+                <td>@item.Brand</td>
+                <td>@item.Category</td>
+                <td>@item.Stock</td>
+                <td>@item.Price ₺</td>
+                <td><a href="/Default/DeleteProduct/@item.Id" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Default/UpdateProduct/@item.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Default/AddProduct/" class="btn btn-primary">Yeni Ürün Girişi</a>
+</div>
+
